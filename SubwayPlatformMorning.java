@@ -14,6 +14,7 @@ public class SubwayPlatformMorning implements Location{
 
     @Override
     public String enter(Player p) throws InterruptedException{
+	System.out.println("This is a change! For changing! Hope and change!");
 	System.out.println("SKELETON FOR " + getName());
 	return "GameOver";
     }
