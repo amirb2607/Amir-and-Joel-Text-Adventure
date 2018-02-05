@@ -15,7 +15,7 @@ public class Teacher implements Player{
 
     @Override
     public void changeHealth(int delta){
-        health = health - delta;
+        health = health + delta;
     }
 
     @Override
