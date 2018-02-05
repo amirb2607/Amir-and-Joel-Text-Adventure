@@ -19,7 +19,6 @@ public abstract class Item{
      */
     abstract String getDescription();
 
-
     /**
      * Gets the count of how many instances of the item there are. 
      * For example, a pack of gum item might have 5 pieces of gum.
@@ -27,7 +26,6 @@ public abstract class Item{
      * @return the number of instances in this item
      */
     abstract int getCount();
-
 
     /**
      * Uses a positive number of instances of the item. 
@@ -37,7 +35,6 @@ public abstract class Item{
      *         exceeds the count of instances of the item
      */
     abstract void use(int positiveNum) throws IllegalArgumentException;
-
 
     /**
      * Combines two items of the same kind into one.
@@ -50,29 +47,29 @@ public abstract class Item{
      *         as this item
      */
     public void combine(Item sameKind) throws IllegalArgumentException{
-	if(!sameKind.getName().equals(this.getName())){
-	    throw new IllegalArgumentException("sameKind { " + 
-					       sameKind + " }\n" +
-					       "does not have the same name " +
-					       "as this item { " + this + 
-					       " }");
-	}
-	else if(!sameKind.getDescription().equals(this.getDescription())){
-	    throw new IllegalArgumentException("sameKind { " + 
-					       sameKind + " }\n" +
-					       "does not have the same " +
-					       "description as this item { " + 
-					       this + " }");
-	}
+        if(!sameKind.getName().equals(this.getName())){
+            throw new IllegalArgumentException("sameKind { " + 
+                sameKind + " }\n" +
+                "does not have the same name " +
+                "as this item { " + this + 
+                " }");
+        }
+        else if(!sameKind.getDescription().equals(this.getDescription())){
+            throw new IllegalArgumentException("sameKind { " + 
+                sameKind + " }\n" +
+                "does not have the same " +
+                "description as this item { " + 
+                this + " }");
+        }
         // Actual combination to be implemented by subclass
     }
 
     @Override
     public String toString(){
-	return 
-	    "*Item Information*\n" +
-	    "Name:{ " + getName() + " };\n" +
-            "Description:{ " + getDescription() + " };\n" +
-	    "Count:{ " + getCount() + " };\n";
+        return 
+        "*Item Information*\n" +
+        "Name:{ " + getName() + " };\n" +
+        "Description:{ " + getDescription() + " };\n" +
+        "Count:{ " + getCount() + " };\n";
     }
 }

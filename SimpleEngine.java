@@ -25,43 +25,43 @@ public class SimpleEngine implements Engine{
 
     @Override
     public void start() throws InterruptedException{
-	nextLocationName = locations.get(0).enter(player);
+        nextLocationName = locations.get(0).enter(player);
     }
 
     @Override
     public boolean isGameDone(){
-	for(Location loc : locations){
-	    if(loc.getName().equals(nextLocationName)){
-		return false;
-	    }
-	}
-	return true;
+        for(Location loc : locations){
+            if(loc.getName().equals(nextLocationName)){
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
-	public void goToNextState() throws InterruptedException, 
-					   IllegalStateException{
-	for(Location loc : locations){
-	    if(loc.getName().equals(nextLocationName)){
-		nextLocationName = loc.enter(player);
-		return;
-	    }
-	}
+    public void goToNextState() throws InterruptedException, 
+    IllegalStateException{
+        for(Location loc : locations){
+            if(loc.getName().equals(nextLocationName)){
+                nextLocationName = loc.enter(player);
+                return;
+            }
+        }
         throw new IllegalStateException("Location '" + nextLocationName + "'" +
-					" is not defined for game.");
+            " is not defined for game.");
     }
 
     @Override
     public String toString(){
-	String engineInfo;
-	engineInfo =
-            "*SimpleEngine Information*\n" + 
-	    "Player:{ " + player.toString() + " };\n" + 
-	    "Next Location:{ " + nextLocationName + " };\n";
-	engineInfo += "All Locations:{ "; 
+        String engineInfo;
+        engineInfo =
+        "*SimpleEngine Information*\n" + 
+        "Player:{ " + player.toString() + " };\n" + 
+        "Next Location:{ " + nextLocationName + " };\n";
+        engineInfo += "All Locations:{ "; 
         for(Location loc : locations){
-	    engineInfo += loc.getName() + " ";
-	}
+            engineInfo += loc.getName() + " ";
+        }
         engineInfo += "};\n";
         return engineInfo;
     }

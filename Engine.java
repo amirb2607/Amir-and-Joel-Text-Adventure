@@ -34,5 +34,5 @@ public interface Engine{
      * @throws IllegalStateException if game is not started OR game is done
      */
     public void goToNextState() throws InterruptedException,
-				       IllegalStateException;    
+    IllegalStateException;    
 }

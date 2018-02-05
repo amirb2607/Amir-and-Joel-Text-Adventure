@@ -13,11 +13,11 @@ public class TextAdventureConsole{
      * @throws InterruptedException if the game is interrupted while paused
      */
     public static void main(String[] args) throws InterruptedException{
-	Game g = new AdventureForSoftwareEngineering();
-	Engine e = new SimpleEngine(g);
-	e.start();
-	while(!e.isGameDone()){
-	    e.goToNextState();
-	}
+        Game g = new AdventureForSoftwareEngineering();
+        Engine e = new SimpleEngine(g);
+        e.start();
+        while(!e.isGameDone()){
+            e.goToNextState();
+        }
     }
 }

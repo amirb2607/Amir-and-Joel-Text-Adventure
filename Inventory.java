@@ -12,7 +12,6 @@ public interface Inventory{
      */
     public void addItem(Item i);
 
-
     /**
      * Determines whether or not an {@link Item} with the itemName is in the
      * inventory

@@ -5,17 +5,17 @@
  * @see AdventureForSoftwareEngineering
  */
 public class SubwayPlatformMorning implements Location{
-    
+
     @Override
     public String getName(){
-	// Location name will match class name for convenience
-	return "SubwayPlatformMorning";
+        // Location name will match class name for convenience
+        return "SubwayPlatformMorning";
     }
 
     @Override
     public String enter(Player p) throws InterruptedException{
-	System.out.println("This is a change! For changing! Hope and change!");
-	System.out.println("SKELETON FOR " + getName());
-	return "GameOver";
+        System.out.println("This is a change! For changing! Hope and change!");
+        System.out.println("SKELETON FOR " + getName());
+        return "GameOver";
     }
 }
