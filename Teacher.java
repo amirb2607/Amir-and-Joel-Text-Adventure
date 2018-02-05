@@ -4,17 +4,18 @@
  * @version 1.0
  */
 public class Teacher implements Player{
+    
+    private int health = 100;
 
     @Override
     public int getHealth(){
         // Teachers are always 100% healthy
-        return 100;
+        return health;
     }
 
     @Override
     public void changeHealth(int delta){
-        // Teachers are always 100% healthy
-        return;
+        health = health - delta;
     }
 
     @Override
