@@ -30,7 +30,7 @@ public class ApartmentWakeUp implements Location{
             int ptsOff = hrsLate * 20;
             System.out.format("\n##\n##RUNNING %d HRS LATE.\n" +
                 "##LOSE %d HEALTH!\n##\n\n", hrsLate, ptsOff);
-            p.changeHealth(ptsOff);
+            p.changeHealth(-ptsOff);
             Thread.sleep(1000);
             System.out.println("'Oh gosh, I'm late!'");
             Thread.sleep(1000);
