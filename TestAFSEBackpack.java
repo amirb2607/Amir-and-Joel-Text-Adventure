@@ -11,7 +11,7 @@ import org.junit.Test;
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class TestBackpack
+public class TestAFSEBackpack
 {
     @Test
     public void testConstructor()
