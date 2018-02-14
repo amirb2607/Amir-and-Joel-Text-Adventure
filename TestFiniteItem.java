@@ -65,5 +65,34 @@ public class TestFiniteItem
         assertEquals(2, i.getCount());
         i.use(0);
     }
+    
+    @Test
+    public void testCombine()
+    {
+        Item m0 = new FiniteItem("Money", "Cash money", 10);
+        Item m1 = new FiniteItem("Money", "Cash money", 30);
+        m0.combine(m1);
+        assertEquals(40, m0.getCount());
+        assertEquals(30, m1.getCount());  
+    }
+    
+    
+    @Test
+    public void testFailingWrongNameCombine()
+    {
+        Item m0 = new FiniteItem("Wallet", "Cash money", 10);
+        Item m1 = new FiniteItem("Money", "Cash money", 30);
+        m0.combine(m1);
+        // Should crash
+    }
+    
+    @Test
+    public void testFailingWrongDescriptionCombine()
+    {
+        Item m0 = new FiniteItem("Money", "Currency", 10);
+        Item m1 = new FiniteItem("Money", "Dollars", 30);
+        m0.combine(m1);
+        // Should crash
+    }
 }
 
