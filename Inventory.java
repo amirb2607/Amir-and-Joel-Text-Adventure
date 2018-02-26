@@ -31,4 +31,17 @@ public interface Inventory{
      *         no such {@link Item} exists
      */
     public Item getItem(String itemName);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
