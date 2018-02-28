@@ -35,10 +35,11 @@ public class AFSEBackpack implements Inventory
      * exists in the inventory.
      *
      * @param itemName the name of the item
-     * @return an {@link Item} that has the corresponding itemName, null if
-     *         no such {@link Item} exists
+     * @return an {@link Item} that has the corresponding itemNam
+     * 
+     * @throws IllegalArgumentException if no item that matches itemName
      */
-    public Item getItem(String itemName)
+    public Item getItem(String itemName) throws IllegalArgumentException
     {
         return null;
     }
