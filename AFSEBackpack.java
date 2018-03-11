@@ -21,9 +21,14 @@ public class AFSEBackpack implements Inventory
      *
      * @param i the {@link Item} to be added to the inventory
      */
-    public void addItem(Item i)
+    public void addItem(Item item)
     {
-      pockets.add(i);
+      for(int i = 0; i < pockets.size(); i++){
+        if(pockets.get(i).getName().equals(item.getName()) && pockets.get(i).getDescription().equals(item.getDescription())){
+         pockets.get(i).combine(item);
+        }
+      }
+      pockets.add(item);
     }
 
     /**
@@ -56,7 +61,7 @@ public class AFSEBackpack implements Inventory
     public boolean hasItem(String itemName)
     {
        for(int i = 0; i < pockets.size(); i++){
-         if((itemName).equals(pockets.get(i).getName())){
+         if((itemName).equals(pockets.get(i).getName()) && pockets.get(i).getCount() != 0){
            return true;
          }
        }
