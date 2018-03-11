@@ -1,4 +1,6 @@
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 /**
  * Write a description of class AFSEBackpack here.
  * 
@@ -8,6 +10,12 @@ import java.util.List;
 public class AFSEBackpack implements Inventory
 {
     private List<Item> pockets;
+    
+    public AFSEBackpack()
+    {
+      pockets = new ArrayList<Item>();
+    }
+    
     /**
      * Adds an {@link Item} to the inventory
      *
@@ -15,19 +23,7 @@ public class AFSEBackpack implements Inventory
      */
     public void addItem(Item i)
     {
-    }
-
-    /**
-     * Determines whether or not an {@link Item} with the itemName is in the
-     * inventory
-     *
-     * @param itemName the name of the item
-     * @return true if an item with itemName is in the inventory, false
-     *         otherwise
-     */
-    public boolean hasItem(String itemName)
-    {
-        return false;
+      pockets.add(i);
     }
 
     /**
@@ -41,6 +37,29 @@ public class AFSEBackpack implements Inventory
      */
     public Item getItem(String itemName) throws IllegalArgumentException
     {
-        return null;
+      for(int i = 0; i < pockets.size(); i++){
+        if((itemName).equals(pockets.get(i).getName())){
+          return pockets.get(i);
+        }
+      }
+      throw new IllegalArgumentException("This item is not in the inventory!");
+    }
+    
+        /**
+     * Determines whether or not an {@link Item} with the itemName is in the
+     * inventory
+     *
+     * @param itemName the name of the item
+     * @return true if an item with itemName is in the inventory, false
+     *         otherwise
+     */
+    public boolean hasItem(String itemName)
+    {
+       for(int i = 0; i < pockets.size(); i++){
+         if((itemName).equals(pockets.get(i).getName())){
+           return true;
+         }
+       }
+       return false;
     }
 }
