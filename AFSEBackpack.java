@@ -44,6 +44,7 @@ public class AFSEBackpack implements Inventory
     {
       for(int i = 0; i < pockets.size(); i++){
         if((itemName).equals(pockets.get(i).getName())){
+          cleanUp();
           return pockets.get(i);
         }
       }
@@ -60,11 +61,21 @@ public class AFSEBackpack implements Inventory
      */
     public boolean hasItem(String itemName)
     {
+       cleanUp();
        for(int i = 0; i < pockets.size(); i++){
          if((itemName).equals(pockets.get(i).getName()) && pockets.get(i).getCount() != 0){
            return true;
          }
        }
        return false;
+    }
+    
+    public void cleanUp()
+    {
+      for(int w = 0; w < pockets.size(); w++){
+         if(pockets.get(w).getCount() == 0){
+         pockets.remove(w);
+        }
+      }
     }
 }
