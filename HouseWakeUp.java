@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @version 1.0
  * @see AdventureForSoftwareEngineering
  */
-public class ApartmentWakeUp implements Location{
+public class HouseWakeUp implements Location{
 
     private int timeHr = 4;
     private String month = "September";
