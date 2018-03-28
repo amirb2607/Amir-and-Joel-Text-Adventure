@@ -8,14 +8,14 @@ import java.util.Scanner;
  */
 public class HouseWakeUp implements Location{
 
-    private int timeHr = 4;
-    private String month = "September";
-    private int day = 8;
+    private int timeHr = 7;
+    private String month = "March";
+    private int day = 28;
 
     @Override
     public String getName(){
         // Location name will match class name for convenience
-        return "ApartmentWakeUp";
+        return "HouseWakeUp";
     }
 
     @Override
@@ -114,13 +114,13 @@ public class HouseWakeUp implements Location{
 
         System.out.format("\n%d:30 (MT) on %s %d.\n", timeHr, month, day );
         Thread.sleep(1000);
-        System.out.println("'The first day of school--and I'm exhausted.'");
+        System.out.println("'Another day at AFSE *sigh*'");
         Thread.sleep(1000);
 
         String options = "sdw";
         int selectedIdx = -1;
         while(!(selectedIdx >= 0)){
-            System.out.print("**\n**[s] TO SNOOZE\n**[d] TO DISMISS\n"+
+            System.out.print("**\n**[5] for 5 more mintues\n**[d] To skip 1st and 2nd period\n"+
                 "**[w] TO WAKE UP\n**\n> ");
             String userInput = sc.next();
             Thread.sleep(1000);
@@ -153,4 +153,13 @@ public class HouseWakeUp implements Location{
         Thread.sleep(1000);
         decideToGetUp(p);
     }
+    
+    public int returnHr(){
+      return timeHr;
+    }
+    
+    public int returnDay(){
+      return day;
+    }
+    //ad
 }
