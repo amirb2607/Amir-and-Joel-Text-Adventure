@@ -6,16 +6,16 @@
  * @author (Amir Badrudeen)
  * @version (0.1)
  */
-public class WalkToAFSE implements Location
+public class WalkToAXSE implements Location
 {
     private int timeHr = 4;
-    private String month = "September";
+    private String month = "March";
     private int day = 8;
 
     @Override
     public String getName(){
         // Location name will match class name for convenience
-        return "WalkToAFSE";
+        return "WalkToAXSE";
     }
 
     @Override
