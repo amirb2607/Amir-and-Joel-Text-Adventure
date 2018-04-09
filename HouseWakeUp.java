@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /**
  * Starting location for a school based text adventure game
  * @author Sean Stern
@@ -11,7 +10,6 @@ public class HouseWakeUp implements Location{
     private int timeHr = 7;
     private String month = "March";
     private int day = 28;
-
     @Override
     public String getName(){
         // Location name will match class name for convenience
@@ -24,25 +22,32 @@ public class HouseWakeUp implements Location{
         decideToGetUp(p);
 
         String nextLocationName;
-        if(timeHr > 8){
+        if(timeHr == 8){
             // After 8:30 MT, you're going to be late :-(
-            int hrsLate = timeHr - 8;
-            int ptsOff = hrsLate * 20;
-            System.out.format("\n##\n##RUNNING %d HRS LATE.\n" +
-                "##LOSE %d HEALTH!\n##\n\n", hrsLate, ptsOff);
-            p.changeHealth(-ptsOff);
+            System.out.println("*Sigh* I have Stony first!");
             Thread.sleep(1000);
-            System.out.println("'Oh gosh, I'm late!'");
+            System.out.println("Should I go to Starbucks today?");
             Thread.sleep(1000);
-            System.out.println("'Let's get dressed...'");
+            System.out.println("If I go then I'll miss 20 minutes of Stony");
             Thread.sleep(1000);
-            System.out.println("'And head to the subway!'");
+            System.out.println("Do you want to go to Starbucks?");
+            Scanner sc = new Scanner(System.in);
+            String userinput = sc.next();
             Thread.sleep(1000);
-            nextLocationName = "SubwayPlatformMorning";
+            if(userinput.equals("YES"))
+            {
+              nextLocationName = "Starbucks";
+            }
+            else
+            {
+              nextLocationName = "AXXE";
+            }
         }
-        else if(timeHr > 6){
+        else if(timeHr > 9){
             // After 6:30 MT, you have just enough time to go
-            System.out.println("'Oh gosh, I'm need to go!'");
+            System.out.println("'Oh gosh, I'm going to miss Ms. Village's class!'");
+            Thread.sleep(1000);
+            System.out.println("I guess that sucks.");
             Thread.sleep(1000);
             System.out.println("'Let's get dressed...'");
             Thread.sleep(1000);
@@ -70,15 +75,16 @@ public class HouseWakeUp implements Location{
             System.out.println("'Wow, I nearly forgot to bring the first " +
                 "day's quizzes!'");
             Thread.sleep(1000);
-            // TBD: Create inventory items including cash, keys, phone,
-            // student quizzes this to player inventory for future
-            // locations
-            // e.g.
-            // Item bills = new Money("Money", 20);
-            // Item keys = new Keys("Keys", 5);
-            // Item phone = new Phone("Phone");
-            // Item quizzes = new Quizzes("Quiz", 28);
-            nextLocationName = "ApartmentBreakfast";
+            
+            Inventory backpack = new AFSEBackpack();
+            Item bills = new FiniteItem("Money", "The finest paper", 50);
+            Item keys = new FiniteItem("Keys", "Keys", 5);
+            Item phone = new FiniteItem("Phone", "Phone", 1);
+            backpack.addItem(bills);
+            backpack.addItem(keys);
+            backpack.addItem(phone);
+            //System.out.println(backpack.hasItem("Money"));
+            nextLocationName = "Starbucks";
         }
 
         // Before leaving the location, always 
@@ -117,7 +123,7 @@ public class HouseWakeUp implements Location{
         System.out.println("'Another day at AFSE *sigh*'");
         Thread.sleep(1000);
 
-        String options = "sdw";
+        String options = "5dw";
         int selectedIdx = -1;
         while(!(selectedIdx >= 0)){
             System.out.print("**\n**[5] for 5 more mintues\n**[d] To skip 1st and 2nd period\n"+

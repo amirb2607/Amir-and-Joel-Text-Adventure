@@ -1,27 +1,27 @@
 
 /**
  * Write a description of class WalkToAFSE here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+<<<<<<< HEAD
+ *
+ * @author (Amir Badrudeen)
+ * @version (0.1)
  */
 public class WalkToAFSE implements Location
 {
-    // instance variables - replace the example below with your own
-   
+    private int timeHr = 4;
+    private String month = "September";
+    private int day = 8;
+
+    @Override
     public String getName(){
-     return "WalkToAFSE";  
+        // Location name will match class name for convenience
+        return "WalkToAFSE";
     }
 
-    /**
-     * Causes the {@link Player} to enter the location and returns
-     * the name of the next game location.
-     *
-     * @param p the {@link Player} entering the location
-     * @return the name of the next location
-     * @throws InterruptedException if the game is paused and gets interrupted
-     */
-    public String enter(Player p) throws InterruptedException{
-      return "AFSE";   
+    @Override
+    public String enter(Player p)
+    {
+        // put your code here
+        return "l";
     }
 }
