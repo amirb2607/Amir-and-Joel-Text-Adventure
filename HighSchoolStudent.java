@@ -9,16 +9,6 @@ public class HighSchoolStudent implements Player{
     private int tiredness = 100;
     
     @Override
-    public int getHealth(){
-        return 100;
-    }
-
-    @Override
-    public void changeHealth(int delta){
-        
-    }
-
-    @Override
     public Inventory getInventory(){
         return null; 
     }
@@ -36,5 +26,9 @@ public class HighSchoolStudent implements Player{
     @Override
     public int getMoney(){
         return 0;
+    }
+
+    public void changeGPA(int newGrade){
+        GPA += newGrade;
     }
 }
