@@ -17,7 +17,6 @@ public class HouseWakeUp implements Location{
 
     @Override
     public String enter(Player p) throws InterruptedException{
-
         decideToGetUp(p);
 
         String nextLocationName;
@@ -48,10 +47,10 @@ public class HouseWakeUp implements Location{
             }
             else
             {
-              nextLocationName = "AXXE";
+              nextLocationName = "AXSE";
             }
         }
-        else if(timeHr > 9){
+        else if(timeHr >= 9){
             // After 6:30 MT, you have just enough time to go
             System.out.println("'Oh gosh, I'm going to miss Ms. Village's class!'");
             Thread.sleep(1000);
@@ -68,12 +67,12 @@ public class HouseWakeUp implements Location{
             backpack.addItem(bills);
             backpack.addItem(keys);
             backpack.addItem(phone);            
-            nextLocationName = "AXXE";
+            nextLocationName = "AXSE";
         }
         else{
             // 6:30 MT or earlier, enough time to shower, eat, grab
             // all stuff
-            System.out.println("'Man I really hate AXXE'");
+            System.out.println("'Man I really hate AXSE'");
             Thread.sleep(1000);
             System.out.println("'Why did I even choose this school?'");
             Thread.sleep(1000);
@@ -94,10 +93,7 @@ public class HouseWakeUp implements Location{
         // Before leaving the location, always 
         //  -check if we've hit game over (player is dead)
         //  -update the day and time for the next time player enters
-        if(p.getHealth() <= 0){
-            nextLocationName = "GameOver";
-        }
-        timeHr = 4;
+        timeHr = 7;
         day++;
         // TBD: update month correctly
 
@@ -124,13 +120,13 @@ public class HouseWakeUp implements Location{
 
         System.out.format("\n%d:30 (MT) on %s %d.\n", timeHr, month, day );
         Thread.sleep(1000);
-        System.out.println("'Another day at AXXE *sigh*'");
+        System.out.println("'Another day at AXSE *sigh*'");
         Thread.sleep(1000);
 
-        String options = "5dw";
+        String options = "sdw";
         int selectedIdx = -1;
         while(!(selectedIdx >= 0)){
-            System.out.print("**\n**[5] for 5 more mintues\n**[d] To skip 1st and 2nd period\n"+
+            System.out.print("**\n**[s] to sleep in\n**[d] To skip 1st and 2nd period for sleep\n"+
                 "**[w] TO WAKE UP\n**\n> ");
             String userInput = sc.next();
             Thread.sleep(1000);
@@ -147,21 +143,19 @@ public class HouseWakeUp implements Location{
     private void snooze(Player p) throws InterruptedException{
         timeHr+=1;
         // Snoozing gives 10 health points
-        p.changeHealth(10);
+        //p.changeHealth(10);
         System.out.println("\n##\n##SNOOZING ALARM.\n##GAINED 10 HEALTH!\n" + 
             "##\n");
         Thread.sleep(1000);
-        decideToGetUp(p);
     }
 
     private void dismiss(Player p) throws InterruptedException{
         timeHr+=2;
         // Dismissing gives 20 health points  
-        p.changeHealth(20);
+        //p.changeHealth(20);
         System.out.println("\n##\n##DISMISSING ALARM.\n##GAINED 20 HEALTH!\n" +
             "##\n");
         Thread.sleep(1000);
-        decideToGetUp(p);
     }
     
     public int returnHr(){
