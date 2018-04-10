@@ -1,15 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=java.util.List\ getLocations()
-<<<<<<< HEAD
 comment0.text=\r\n\ Gets\ a\ list\ of\ all\ the\ the\ locations\ in\ the\ game\r\n\r\n\ @return\ a\ list\ of\ all\ the\ locations\ in\ the\ game\r\n\ @see\ Location\r\n
 comment1.params=
 comment1.target=Player\ getPlayer()
 comment1.text=\r\n\ Get\ the\ player\ for\ the\ game\r\n\r\n\ @return\ a\ player\ for\ the\ game\r\n\ @see\ Player\r\n
-=======
-comment0.text=\n\ Gets\ a\ list\ of\ all\ the\ the\ locations\ in\ the\ game\n\n\ @return\ a\ list\ of\ all\ the\ locations\ in\ the\ game\n\ @see\ Location\n
-comment1.params=
-comment1.target=Player\ getPlayer()
-comment1.text=\n\ Get\ the\ player\ for\ the\ game\n\n\ @return\ a\ player\ for\ the\ game\n\ @see\ Player\n
->>>>>>> a73643b9a122368e07d3df7ceea2fa546b200e76
 numComments=2
