@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /**
  * Starting location for a school based text adventure game
  * @author Sean Stern
@@ -7,11 +6,9 @@ import java.util.Scanner;
  * @see AdventureForSoftwareEngineering
  */
 public class HouseWakeUp implements Location{
-
     private int timeHr = 7;
     private String month = "March";
     private int day = 28;
-
     @Override
     public String getName(){
         // Location name will match class name for convenience
@@ -24,61 +21,74 @@ public class HouseWakeUp implements Location{
         decideToGetUp(p);
 
         String nextLocationName;
-        if(timeHr > 8){
+        if(timeHr == 8){
             // After 8:30 MT, you're going to be late :-(
-            int hrsLate = timeHr - 8;
-            int ptsOff = hrsLate * 20;
-            System.out.format("\n##\n##RUNNING %d HRS LATE.\n" +
-                "##LOSE %d HEALTH!\n##\n\n", hrsLate, ptsOff);
-            p.changeHealth(-ptsOff);
+            System.out.println("*Sigh* I have Stony first!");
+            Thread.sleep(1500);
+            System.out.println("Should I go to Starbucks today?");
+            Thread.sleep(1500);
+            System.out.println("If I go then I'll miss 20 minutes of Stony.");
+            Thread.sleep(2000);
+            System.out.println("Do you want to go to Starbucks? [Yes] or [No]");
+            Scanner sc = new Scanner(System.in);
+            String userinput = sc.next();
+            userinput = userinput.toUpperCase();
             Thread.sleep(1000);
-            System.out.println("'Oh gosh, I'm late!'");
-            Thread.sleep(1000);
-            System.out.println("'Let's get dressed...'");
-            Thread.sleep(1000);
-            System.out.println("'And head to the subway!'");
-            Thread.sleep(1000);
-            nextLocationName = "SubwayPlatformMorning";
+            Inventory backpack = new AFSEBackpack();
+            Item bills = new FiniteItem("Money", "The finest paper", 50);
+            Item keys = new FiniteItem("Keys", "Keys", 5);
+            Item phone = new FiniteItem("Phone", "Phone", 1);
+            backpack.addItem(bills);
+            backpack.addItem(keys);
+            backpack.addItem(phone);
+            nextLocationName = "Starbucks";
+            if(userinput.equals("YES"))
+            {
+              nextLocationName = "Starbucks";
+            }
+            else
+            {
+              nextLocationName = "AXXE";
+            }
         }
-        else if(timeHr > 6){
+        else if(timeHr > 9){
             // After 6:30 MT, you have just enough time to go
-            System.out.println("'Oh gosh, I'm need to go!'");
+            System.out.println("'Oh gosh, I'm going to miss Ms. Village's class!'");
+            Thread.sleep(1000);
+            System.out.println("I guess that sucks.");
             Thread.sleep(1000);
             System.out.println("'Let's get dressed...'");
             Thread.sleep(1000);
-            System.out.println("'And grab my wallet, keys, and phone!'");
+            System.out.println("'And grab my backpack!'");
             Thread.sleep(1000);
-            // TBD: Create inventory items including cash, keys, phone
-            // and add this to player inventory for future locations
-            // e.g.
-            // Item bills = new Money("Money", 20);
-            // Item keys = new Keys("Keys", 5);
-            // Item phone = new Phone("Phone");
-            nextLocationName = "SubwayPlatformMorning";
+            Item bills = new FiniteItem("Money", "The finest paper", 50);
+            Item keys = new FiniteItem("Keys", "Keys", 5);
+            Item phone = new FiniteItem("Phone", "Phone", 1);
+            Inventory backpack = new AFSEBackpack();
+            backpack.addItem(bills);
+            backpack.addItem(keys);
+            backpack.addItem(phone);            
+            nextLocationName = "AXXE";
         }
         else{
             // 6:30 MT or earlier, enough time to shower, eat, grab
             // all stuff
-            System.out.println("'Nothing like a shower to wake me up!'");
+            System.out.println("'Man I really hate AXXE'");
             Thread.sleep(1000);
-            System.out.println("'...bruffin mah teef...'");
+            System.out.println("'Why did I even choose this school?'");
             Thread.sleep(1000);
-            System.out.println("'Let's get dressed...'");
+            System.out.println("'Damn I have Stony first.'");
             Thread.sleep(1000);
-            System.out.println("'Grab my wallet, keys, and phone.'");
+            System.out.println("'I guess I'll head out to Starbucks now.'");
             Thread.sleep(1000);
-            System.out.println("'Wow, I nearly forgot to bring the first " +
-                "day's quizzes!'");
-            Thread.sleep(1000);
-            // TBD: Create inventory items including cash, keys, phone,
-            // student quizzes this to player inventory for future
-            // locations
-            // e.g.
-            // Item bills = new Money("Money", 20);
-            // Item keys = new Keys("Keys", 5);
-            // Item phone = new Phone("Phone");
-            // Item quizzes = new Quizzes("Quiz", 28);
-            nextLocationName = "ApartmentBreakfast";
+            Inventory backpack = new AFSEBackpack();
+            Item bills = new FiniteItem("Money", "The finest paper", 50);
+            Item keys = new FiniteItem("Keys", "Keys", 5);
+            Item phone = new FiniteItem("Phone", "Phone", 1);
+            backpack.addItem(bills);
+            backpack.addItem(keys);
+            backpack.addItem(phone);
+            nextLocationName = "Starbucks";
         }
 
         // Before leaving the location, always 
@@ -114,10 +124,10 @@ public class HouseWakeUp implements Location{
 
         System.out.format("\n%d:30 (MT) on %s %d.\n", timeHr, month, day );
         Thread.sleep(1000);
-        System.out.println("'Another day at AFSE *sigh*'");
+        System.out.println("'Another day at AXXE *sigh*'");
         Thread.sleep(1000);
 
-        String options = "sdw";
+        String options = "5dw";
         int selectedIdx = -1;
         while(!(selectedIdx >= 0)){
             System.out.print("**\n**[5] for 5 more mintues\n**[d] To skip 1st and 2nd period\n"+

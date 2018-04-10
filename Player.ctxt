@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=int\ getHealth()
+<<<<<<< HEAD
 comment0.text=\r\n\ Gets\ the\ health\ of\ the\ player.\r\n\r\n\ @return\ the\ numeric\ health\ of\ the\ player\r\n
 comment1.params=delta
 comment1.target=void\ changeHealth(int)
@@ -17,4 +18,22 @@ comment4.text=\r\n\ Gets\ the\ player's\ tiredness\ so\ they\ can\ paricipate\ i
 comment5.params=
 comment5.target=int\ getMoney()
 comment5.text=\r\n\ Gets\ the\ player's\ money\ as\ an\ overall\ score\ system.\r\n\r\n\ @return\ the\ player's\ money.\r\n
+=======
+comment0.text=\n\ Gets\ the\ health\ of\ the\ player.\n\n\ @return\ the\ numeric\ health\ of\ the\ player\n
+comment1.params=delta
+comment1.target=void\ changeHealth(int)
+comment1.text=\n\ Changes\ the\ health\ of\ the\ player.\n\n\ @param\ delta\ the\ numeric\ change\ to\ the\ health\ of\ the\ player\n
+comment2.params=
+comment2.target=Inventory\ getInventory()
+comment2.text=\n\ Gets\ the\ player's\ inventory\n\n\ @return\ the\ player's\ {@link\ Inventory}\n
+comment3.params=
+comment3.target=double\ getHighSchoolGPA()
+comment3.text=\n\ Gets\ the\ player's\ GPA\ needed\ for\ college\ and\ other\ activities.\n\n\ @return\ the\ player's\ HighSchoolGPA\n
+comment4.params=
+comment4.target=int\ getTiredness()
+comment4.text=\n\ Gets\ the\ player's\ tiredness\ so\ they\ can\ paricipate\ in\ activities.\n\n\ @return\ the\ player's\ tiredness.\n
+comment5.params=
+comment5.target=int\ getMoney()
+comment5.text=\n\ Gets\ the\ player's\ money\ as\ an\ overall\ score\ system.\n\n\ @return\ the\ player's\ money.\n
+>>>>>>> a73643b9a122368e07d3df7ceea2fa546b200e76
 numComments=6

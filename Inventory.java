@@ -32,16 +32,4 @@ public interface Inventory{
      */
     public Item getItem(String itemName);
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
