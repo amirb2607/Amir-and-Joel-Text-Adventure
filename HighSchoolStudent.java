@@ -5,7 +5,7 @@
  */
 public class HighSchoolStudent implements Player{
     
-    private double GPA = 100;
+    private double GPA = 2;
     private int tiredness = 100;
     
     @Override

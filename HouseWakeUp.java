@@ -42,7 +42,7 @@ public class HouseWakeUp implements Location{
             backpack.addItem(keys);
             backpack.addItem(phone);
             nextLocationName = "Starbucks";
-            if(userinput.equals("YES"))
+            if(userinput.toLowerCase().equals("yes"))
             {
               nextLocationName = "Starbucks";
             }
@@ -91,12 +91,6 @@ public class HouseWakeUp implements Location{
             nextLocationName = "Starbucks";
         }
 
-        // Before leaving the location, always 
-        //  -check if we've hit game over (player is dead)
-        //  -update the day and time for the next time player enters
-        if(p.getHealth() <= 0){
-            nextLocationName = "GameOver";
-        }
         timeHr = 4;
         day++;
         // TBD: update month correctly
@@ -147,7 +141,7 @@ public class HouseWakeUp implements Location{
     private void snooze(Player p) throws InterruptedException{
         timeHr+=1;
         // Snoozing gives 10 health points
-        p.changeHealth(10);
+        //p.changeHealth(10);
         System.out.println("\n##\n##SNOOZING ALARM.\n##GAINED 10 HEALTH!\n" + 
             "##\n");
         Thread.sleep(1000);
@@ -157,7 +151,7 @@ public class HouseWakeUp implements Location{
     private void dismiss(Player p) throws InterruptedException{
         timeHr+=2;
         // Dismissing gives 20 health points  
-        p.changeHealth(20);
+        //p.changeHealth(20);
         System.out.println("\n##\n##DISMISSING ALARM.\n##GAINED 20 HEALTH!\n" +
             "##\n");
         Thread.sleep(1000);

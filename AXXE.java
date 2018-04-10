@@ -6,7 +6,7 @@
  * @author (Amir Badrudeen)
  * @version (0.1)
  */
-public class WalkToAXSE implements Location
+public class AXXE implements Location
 {
     private int timeHr = 4;
     private String month = "March";
@@ -15,13 +15,14 @@ public class WalkToAXSE implements Location
     @Override
     public String getName(){
         // Location name will match class name for convenience
-        return "WalkToAXSE";
+        return "AXXE";
     }
 
     @Override
     public String enter(Player p)
     {
         // put your code here
+        System.out.println("*Stony first!");
         return "l";
     }
 }
