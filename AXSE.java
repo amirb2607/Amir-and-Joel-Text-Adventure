@@ -5,12 +5,7 @@
  * @author (Amir Badrudeen)
  * @version (0.1)
  */
-public class AXSE implements Location
-{
-    private int timeHr = 4;
-    private String month = "March";
-    private int day = 8;
-
+public class AXSE implements Location{
     @Override
     public String getName(){
         // Location name will match class name for convenience
@@ -22,6 +17,7 @@ public class AXSE implements Location
     {
         // put your code here
         System.out.println("*Now entering AXSE!*");
+        System.out.println("The time is " + p.getTime());
         return "l";
     }
 }

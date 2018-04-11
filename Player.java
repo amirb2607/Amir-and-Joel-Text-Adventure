@@ -27,4 +27,8 @@ public interface Player{
     public void changeTiredness(int change);
     
     public void setInventory(Inventory iv);
+    
+    public int getTime();
+    
+    public void changeTime(int t);
 }

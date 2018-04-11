@@ -18,8 +18,10 @@ public class Starbucks implements Location
     
     public String enter(Player p) throws InterruptedException{
       System.out.println("*Now entering Starbucks!*");
+      p.changeTime(1);
+      p.changeTiredness(1);
       Thread.sleep(1000);
-      return "AXXE";
+      return "AXSE";
     }
 
     /**
