@@ -12,8 +12,7 @@ public class Starbucks implements Location
     /**
      * Constructor for objects of class Starbucks
      */
-    public Starbucks()
-    {
+    public Starbucks(){
        
     }
     

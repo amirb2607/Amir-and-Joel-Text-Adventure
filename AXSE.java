@@ -14,13 +14,14 @@ public class AXSE implements Location
     @Override
     public String getName(){
         // Location name will match class name for convenience
-        return "WalkToAXSE";
+        return "AXSE";
     }
 
     @Override
     public String enter(Player p)
     {
         // put your code here
+        System.out.println("*Now entering AXSE!*");
         return "l";
     }
 }

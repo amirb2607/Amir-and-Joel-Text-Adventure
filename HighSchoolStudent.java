@@ -5,17 +5,12 @@
  */
 public class HighSchoolStudent implements Player{
     
-    private double GPA = 100;
-    private int tiredness = 100;
+    private int tiredness = 5;
+    private Inventory i = null;
     
     @Override
     public Inventory getInventory(){
         return null; 
-    }
-    
-    @Override
-    public double getHighSchoolGPA(){
-        return GPA; 
     }
     
     @Override
@@ -24,11 +19,12 @@ public class HighSchoolStudent implements Player{
     }
     
     @Override
-    public int getMoney(){
-        return 0;
+    public void changeTiredness(int change){
+        tiredness += change;
     }
-
-    public void changeGPA(int newGrade){
-        GPA += newGrade;
+    
+    @Override
+    public void setInventory(Inventory iv){
+        i = iv;
     }
 }

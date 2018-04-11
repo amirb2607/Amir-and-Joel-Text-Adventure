@@ -1,35 +1,13 @@
 #BlueJ class context
 comment0.params=
-<<<<<<< HEAD
 comment0.target=Inventory\ getInventory()
 comment0.text=\n\ Gets\ the\ player's\ inventory\n\n\ @return\ the\ player's\ {@link\ Inventory}\n
 comment1.params=
-comment1.target=double\ getHighSchoolGPA()
-comment1.text=\n\ Gets\ the\ player's\ GPA\ needed\ for\ college\ and\ other\ activities.\n\n\ @return\ the\ player's\ HighSchoolGPA\n
-comment2.params=
-comment2.target=int\ getTiredness()
-comment2.text=\n\ Gets\ the\ player's\ tiredness\ so\ they\ can\ paricipate\ in\ activities.\n\n\ @return\ the\ player's\ tiredness.\n
-comment3.params=
-comment3.target=int\ getMoney()
-comment3.text=\n\ Gets\ the\ player's\ money\ as\ an\ overall\ score\ system.\n\n\ @return\ the\ player's\ money.\n
+comment1.target=int\ getTiredness()
+comment1.text=\n\ Gets\ the\ player's\ tiredness\ so\ they\ can\ paricipate\ in\ activities.\n\n\ @return\ the\ player's\ tiredness.\n
+comment2.params=change
+comment2.target=void\ changeTiredness(int)
+comment2.text=\n\ Changes\ the\ player's\ tiredness\ so\ they\ can\ paricipate\ in\ activities.\n\n\ @changes\ the\ player's\ tiredness.\n
+comment3.params=iv
+comment3.target=void\ setInventory(Inventory)
 numComments=4
-=======
-comment0.target=int\ getHealth()
-comment0.text=\r\n\ Gets\ the\ health\ of\ the\ player.\r\n\r\n\ @return\ the\ numeric\ health\ of\ the\ player\r\n
-comment1.params=delta
-comment1.target=void\ changeHealth(int)
-comment1.text=\r\n\ Changes\ the\ health\ of\ the\ player.\r\n\r\n\ @param\ delta\ the\ numeric\ change\ to\ the\ health\ of\ the\ player\r\n
-comment2.params=
-comment2.target=Inventory\ getInventory()
-comment2.text=\r\n\ Gets\ the\ player's\ inventory\r\n\r\n\ @return\ the\ player's\ {@link\ Inventory}\r\n
-comment3.params=
-comment3.target=double\ getHighSchoolGPA()
-comment3.text=\r\n\ Gets\ the\ player's\ GPA\ needed\ for\ college\ and\ other\ activities.\r\n\r\n\ @return\ the\ player's\ HighSchoolGPA\r\n
-comment4.params=
-comment4.target=int\ getTiredness()
-comment4.text=\r\n\ Gets\ the\ player's\ tiredness\ so\ they\ can\ paricipate\ in\ activities.\r\n\r\n\ @return\ the\ player's\ tiredness.\r\n
-comment5.params=
-comment5.target=int\ getMoney()
-comment5.text=\r\n\ Gets\ the\ player's\ money\ as\ an\ overall\ score\ system.\r\n\r\n\ @return\ the\ player's\ money.\r\n
-numComments=6
->>>>>>> 333eca7a31e0fb4d0f6a91c9067688754ff0491c

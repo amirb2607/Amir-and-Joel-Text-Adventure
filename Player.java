@@ -11,13 +11,6 @@ public interface Player{
      * @return the player's {@link Inventory}
      */
     public Inventory getInventory();
-
-    /**
-     * Gets the player's GPA needed for college and other activities.
-     *
-     * @return the player's HighSchoolGPA
-     */
-    public double getHighSchoolGPA();
     
     /**
      * Gets the player's tiredness so they can paricipate in activities.
@@ -27,9 +20,11 @@ public interface Player{
     public int getTiredness();
     
     /**
-     * Gets the player's money as an overall score system.
+     * Changes the player's tiredness so they can paricipate in activities.
      *
-     * @return the player's money.
+     * @changes the player's tiredness.
      */
-    public int getMoney();
+    public void changeTiredness(int change);
+    
+    public void setInventory(Inventory iv);
 }
