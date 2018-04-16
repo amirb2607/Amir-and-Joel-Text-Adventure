@@ -28,7 +28,7 @@ public interface Player{
     
     public void setInventory(Inventory iv);
     
-    public int getTime();
+    public int getHour();
     
-    public void changeTime(int t);
+    public void changeHour(int t);
 }

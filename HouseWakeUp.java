@@ -132,7 +132,7 @@ public class HouseWakeUp implements Location{
 
     private void snooze(Player p) throws InterruptedException{
         timeHr+=1;
-        p.changeTime(1);
+        p.changeHour(1);
         // Snoozing gives 10 health points
         p.changeTiredness(1);
         System.out.println("\n##\n##SNOOZING ALARM.\n##Player More Awake!\n" + 
@@ -143,7 +143,7 @@ public class HouseWakeUp implements Location{
 
     private void dismiss(Player p) throws InterruptedException{
         timeHr+=2;
-        p.changeTime(2);
+        p.changeHour(2);
         // Dismissing gives 20 health points  
         p.changeTiredness(2);
         System.out.println("\n##\n##SNOOZING ALARM.\n##Player More Awake!\n" + 
@@ -159,5 +159,4 @@ public class HouseWakeUp implements Location{
     public int returnDay(){
       return day;
     }
-    //ad
 }

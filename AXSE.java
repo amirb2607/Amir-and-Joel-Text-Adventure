@@ -17,7 +17,7 @@ public class AXSE implements Location{
     {
         // put your code here
         System.out.println("*Now entering AXSE!*");
-        System.out.println("The time is " + p.getTime());
+        System.out.println("The time is " + p.getHour());
         return "l";
     }
 }
