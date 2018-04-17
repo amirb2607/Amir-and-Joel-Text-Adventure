@@ -6,7 +6,6 @@ import java.util.Scanner;
  * @see AdventureForSoftwareEngineering
  */
 public class HouseWakeUp implements Location{
-    private int timeHr = 7;
     private String month = "March";
     private int day = 28;
     @Override
@@ -21,7 +20,7 @@ public class HouseWakeUp implements Location{
         
         String nextLocationName = "0";
         if(day == 28) {
-            if(timeHr == 8) {
+            if(p.getHour() == 8) {
                 // After 8:30 MT, you're going to be late :-(
                 System.out.println("*Sigh* I have Stony first!");
                 Thread.sleep(1500);
@@ -35,15 +34,14 @@ public class HouseWakeUp implements Location{
                 userinput = userinput.toUpperCase();
                 Thread.sleep(1000);
                 nextLocationName = "Starbucks";
-                if(userinput.toLowerCase().equals("yes"))
+                if(userinput.equals("YES"))
                 {
                   nextLocationName = "Starbucks";
                 }
-                else
-                {
+                else {
                   nextLocationName = "AXSE";
                 }
-            } else if(timeHr >= 9){
+            } else if(p.getHour() >= 9){
                 // After 6:30 MT, you have just enough time to go
                 System.out.println("'Oh gosh, I'm going to miss Ms. Village's class!'");
                 Thread.sleep(1000);
@@ -69,7 +67,7 @@ public class HouseWakeUp implements Location{
                 nextLocationName = "Starbucks";
             }
             Inventory backpack = new AFSEBackpack();
-            Item bills = new FiniteItem("Money", "The finest paper", 50);
+            Item bills = new FiniteItem("Money", "The finest paper", 50000);
             Item gpa = new FiniteItem("GPA", "Grades", 80);
             Item phone = new FiniteItem("Phone", "Phone", 1);
             backpack.addItem(bills);
@@ -82,7 +80,6 @@ public class HouseWakeUp implements Location{
         // Before leaving the location, always 
         //  -check if we've hit game over (player is dead)
         //  -update the day and time for the next time player enters
-        timeHr = 7;
         day++;
         // TBD: update month correctly
         return nextLocationName;
@@ -106,12 +103,12 @@ public class HouseWakeUp implements Location{
             Thread.sleep(1000);
         }
 
-        System.out.format("\n%d:30 (MT) on %s %d.\n", timeHr, month, day );
+        System.out.format("\n%d:30 (MT) on %s %d.\n", p.getHour(), month, day );
         Thread.sleep(1000);
         System.out.println("'Another day at AXSE *sigh*'");
         Thread.sleep(1000);
         
-        if(timeHr == 7){
+        if(p.getHour() == 7){
             String options = "sdw";
             int selectedIdx = -1;
             while(!(selectedIdx >= 0)){
@@ -131,7 +128,6 @@ public class HouseWakeUp implements Location{
     }
 
     private void snooze(Player p) throws InterruptedException{
-        timeHr+=1;
         p.changeHour(1);
         // Snoozing gives 10 health points
         p.changeTiredness(1);
@@ -142,7 +138,6 @@ public class HouseWakeUp implements Location{
     }
 
     private void dismiss(Player p) throws InterruptedException{
-        timeHr+=2;
         p.changeHour(2);
         // Dismissing gives 20 health points  
         p.changeTiredness(2);
@@ -150,10 +145,6 @@ public class HouseWakeUp implements Location{
             "##\n");
         decideToGetUp(p);
         Thread.sleep(1000);
-    }
-    
-    public int returnHr(){
-      return timeHr;
     }
     
     public int returnDay(){
