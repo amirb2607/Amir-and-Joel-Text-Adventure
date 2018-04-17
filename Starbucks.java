@@ -7,16 +7,9 @@ import java.util.Scanner;
  */
 public class Starbucks implements Location
 {
-    // instance variables - replace the example below with your own
-
-    /**
-     * Constructor for objects of class Starbucks
-     */
-    public Starbucks(){
-       
-    }
-    
-    public String enter(Player p) throws InterruptedException{
+    /* instance variables - replace the example below with your own
+    */
+     public String enter(Player p) throws InterruptedException{
       System.out.println("*Now entering Starbucks!*");
       p.changeHour(1);
       p.changeTiredness(1);
@@ -36,10 +29,10 @@ public class Starbucks implements Location
         System.out.println(".");
         Thread.sleep(1000);
         System.out.println("Is that all? -Ashley asks");
-        System.out.println("Of course, you always get the same thing every day");
         Thread.sleep(1000);
-        //System.out.println("One )
+        yesOrNo();
       }
+      //else if()
       return "AXSE";
     }
 
@@ -53,5 +46,35 @@ public class Starbucks implements Location
     {
         return "Starbucks";
     }
+    
+    public void yesOrNo(){
+      System.out.println("[Yes] or [No]?");
+      //Thread.sleep(1000);
+      Scanner scc = new Scanner(System.in);
+      String input = scc.next();
+      input = input.toUpperCase();
+       if(input.equals("YES")){
+        System.out.println("Of course, you always get the same thing every day");
+        //Thread.sleep(1000);         
+      }
+       else if(input.equals("NO")){
+          System.out.println("What else would you like?");
+          //Thread.sleep(1000);
+          Scanner sccc = new Scanner(System.in);
+          String rawr = sccc.nextLine();
+          System.out.println(".");
+          //Thread.sleep(100);
+          System.out.println(".");
+          //Thread.sleep(100);
+          System.out.println(".");
+          //Thread.sleep(1000);
+          System.out.println("Ok, here's your " + rawr + "!");
+        }
+        else{
+          System.out.println("Excuse me?");
+          //Thread.sleep(1000);
+      }
+      }
+    }
    
-}
+
