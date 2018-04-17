@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Player
+comment0.text=\n\ Player\ for\ text\ adventure\ game.\n\ @author\ Sean\ Stern\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=Inventory\ getInventory()
+comment1.text=\n\ Gets\ the\ player's\ inventory\n\n\ @return\ the\ player's\ {@link\ Inventory}\n
+comment2.params=
+comment2.target=int\ getTiredness()
+comment2.text=\n\ Gets\ the\ player's\ tiredness\ so\ they\ can\ paricipate\ in\ activities.\n\n\ @return\ the\ player's\ tiredness.\n
+comment3.params=change
+comment3.target=void\ changeTiredness(int)
+comment3.text=\n\ Changes\ the\ player's\ tiredness\ so\ they\ can\ paricipate\ in\ activities.\n\n\ @changes\ the\ player's\ tiredness.\n
+comment4.params=iv
+comment4.target=void\ setInventory(Inventory)
+comment5.params=
+comment5.target=int\ getHour()
+comment6.params=t
+comment6.target=void\ changeHour(int)
+numComments=7
