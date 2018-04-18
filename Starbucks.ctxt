@@ -1,12 +1,10 @@
 #BlueJ class context
-comment0.target=Starbucks
-comment0.text=\n\ Write\ a\ description\ of\ class\ Starbucks\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=Starbucks()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Starbucks\n
-comment2.params=p
-comment2.target=java.lang.String\ enter(Player)
-comment3.params=
-comment3.target=java.lang.String\ getName()
-comment3.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
-numComments=4
+comment0.params=
+comment0.target=Starbucks()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Starbucks\n
+comment1.params=p
+comment1.target=java.lang.String\ enter(Player)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+numComments=3
