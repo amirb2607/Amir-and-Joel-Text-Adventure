@@ -21,7 +21,13 @@ public class StonyBrook implements Location
     
     @Override
     public String enter(Player p) throws InterruptedException{
+      print("It's your first day at SUNY Stony Brook", 1000);
+      print("dhaouwdhawuhd", 100);
       return "adwda";
-      
+    }
+    
+    public void print(String a, int time) throws InterruptedException{
+     System.out.println(a);
+     Thread.sleep(time);
     }
 }

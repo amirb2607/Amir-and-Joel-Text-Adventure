@@ -5,7 +5,6 @@
  * @version 1.0
  */
 public class TextAdventureConsole{
-
     /**
      * Creates a predetermined {@link Game}, inserts it into an {@link Engine}
      * and plays the game.
