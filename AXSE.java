@@ -12,6 +12,7 @@ public class AXSE implements Location
     public String getName(){
         // Location name will match class name for convenience
         return "AXSE";
+<<<<<<< HEAD
     }
     
     @Override
@@ -73,5 +74,30 @@ public class AXSE implements Location
     
     public void Manson(Player p) throws InterruptedException {
         
+=======
+>>>>>>> 7f13ce228da2069ef835cc127b45aabaebdf2ddd
     }
+    
+    @Override
+    public String enter(Player p)  throws InterruptedException{
+       
+         String nextLocationName; 
+         System.out.println("Finally here in AXSE *Sigh");
+         Thread.sleep(1000);
+         System.out.println("what time is it? " + p.getHour());
+         Thread.sleep(1000);
+         System.out.println("Hey Player are you going to class?");
+         Thread.sleep(1000);
+         System.out.println("Do you want to go to class? [Yes] or [No]");
+         Thread.sleep(1000);
+         Scanner scc = new Scanner(System.in);
+         String input = scc.next();
+         input = input.toUpperCase();
+         if(input.equals("NO")){
+          System.out.println("Um no I'm gonna leave right now.");
+          Thread.sleep(1000);
+          p.changeHour(p.getHour() - 1);
+         }
+         return "HouseWakeUp";
+    }  
 }
