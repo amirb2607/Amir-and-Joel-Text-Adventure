@@ -35,4 +35,8 @@ public interface Player{
     public double getMoney();
     
     public void changeMoney(double m);
+    
+    public int getGPA();
+    
+    public void changeGPA(int g);
 }
