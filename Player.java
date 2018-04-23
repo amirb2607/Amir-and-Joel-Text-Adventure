@@ -31,4 +31,8 @@ public interface Player{
     public int getHour();
     
     public void changeHour(int t);
+    
+    public double getMoney();
+    
+    public void changeMoney(double m);
 }

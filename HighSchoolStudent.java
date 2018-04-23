@@ -8,7 +8,7 @@ public class HighSchoolStudent implements Player{
     private int tiredness = 5;
     private Inventory i = null;
     private int hour = 7;
-    private int minute = 0;
+    private double money = 20;
     
     @Override
     public Inventory getInventory(){
@@ -38,5 +38,15 @@ public class HighSchoolStudent implements Player{
     @Override
     public int getHour(){
         return hour;
+    }
+    
+    @Override
+    public void changeMoney(double m){
+        money += m;
+    }
+    
+    @Override
+    public double getMoney(){
+        return money;
     }
 }
