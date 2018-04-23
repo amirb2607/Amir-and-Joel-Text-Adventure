@@ -25,7 +25,7 @@ public class Harvard implements Location {
         Thread.sleep(1000);
         System.out.println("Hi! I'm uhh ... Toby! -Toby");
         Thread.sleep(1000);
-        System.out.println("How do you respond to Toby? [Hi] or [Akwarly walk away]");
+        System.out.println("How do you respond to Toby? [Hi] or [Akwardly walk away]");
         Scanner sc = new Scanner(System.in);
         String userinput = sc.next();
         userinput = userinput.toUpperCase();
