@@ -38,14 +38,27 @@ public class Harvard implements Location {
             Thread.sleep(1000);
             System.out.println("Are you going to join the dungeons and dragons club? [YES] or [No].");
             String moreUserinput = sc.next();
-            userinput = userinput.toUpperCase();
-        } else {
+            moreUserinput = moreUserinput.toUpperCase();
+            if(moreUserinput.equals("YES")) {
+                System.out.println("Sure");
+                p.addClub("Dungeons and Dragons");
+            } else {
+                System.out.println("Not yet");
+                System.out.println("Its treason then. - Toby");
+                System.out.println("Maybe later.");
+                System.out.println("Ok. You know who to see if you change you mind. - Toby");
+            }
+            System.out.println("What do you have first? - Toby");
+            System.out.println("Business Management.");
+            System.out.println("Me too! I'll see you there. - Toby");
+        } 
+        {
              Thread.sleep(1000);
              System.out.println("*You walk away.*")
              ;Thread.sleep(1000);
              System.out.println("Hey, you don't want to be friends? -Toby");
              ;Thread.sleep(1000);
-             System.out.println("Maybe later. ");
+             System.out.println("Maybe later.");
         }
         System.out.println("*!*");
         return "l";
