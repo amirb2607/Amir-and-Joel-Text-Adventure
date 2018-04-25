@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=HighSchoolStudent
+comment0.text=\n\ Sample\ player\ for\ school\ based\ text\ adventure\ game.\n\ @author\ Sean\ Stern\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=Inventory\ getInventory()
+comment10.params=
+comment10.target=int\ getGPA()
+comment2.params=
+comment2.target=int\ getTiredness()
+comment3.params=change
+comment3.target=void\ changeTiredness(int)
+comment4.params=iv
+comment4.target=void\ setInventory(Inventory)
+comment5.params=t
+comment5.target=void\ changeHour(int)
+comment6.params=
+comment6.target=int\ getHour()
+comment7.params=m
+comment7.target=void\ changeMoney(double)
+comment8.params=
+comment8.target=double\ getMoney()
+comment9.params=g
+comment9.target=void\ changeGPA(int)
+numComments=11
