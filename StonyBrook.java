@@ -1,33 +1,47 @@
-
+import java.util.Scanner;
 /**
- * Write a description of class Stony_Brook here.
+ * Write a description of class StonyBrook here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Amir Badrudeen)
+ * @version (v0.1)
  */
 public class StonyBrook implements Location
 {
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
     @Override
     public String getName()
     {
-        return "StonyBrook";
+      return "StonyBrook";
     }
     
     @Override
     public String enter(Player p) throws InterruptedException{
-      print("It's your first day at SUNY Stony Brook", 1000);
-      print("dhaouwdhawuhd", 100);
+      print("*It's your first day at SUNY Stony Brook*", 1000);
+      print("*Some random nerd walks up to you and introduces himself!*", 1500);
+      print("'Uh, h... he... hey, I'm To... Toby' -Toby", 1500);
+      print("*How are you going to respond?*", 1000);
+      hiOrLmao();
       return "adwda";
     }
     
     public void print(String a, int time) throws InterruptedException{
      System.out.println(a);
      Thread.sleep(time);
+    }
+    
+    public void hiOrLmao() throws InterruptedException{
+      print("[Hi] or [Lmao]", 500);
+      Scanner sc = new Scanner(System.in);
+      String userinput = sc.next();
+      userinput = userinput.toUpperCase();
+      if(userinput.equals("HI")){
+        print("Hi, I'm" + " Player " + "what's your name?", 1300);
+      }
+      else if(userinput.equals("LMAO")){
+        print("Lmao? Do I know you?", 1000);  
+      }
+      else{
+        print("Are you dumb? Respond properly, please", 1300);
+        hiOrLmao();
+      }
     }
 }
