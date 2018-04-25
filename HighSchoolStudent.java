@@ -1,3 +1,7 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Sample player for school based text adventure game.
  * @author Sean Stern
@@ -10,6 +14,7 @@ public class HighSchoolStudent implements Player{
     private int hour = 7;
     private double money = 20;
     private int GPA = 76;
+    ArrayList<String> clubs = new ArrayList<String>();
     
     @Override
     public Inventory getInventory(){
@@ -59,5 +64,15 @@ public class HighSchoolStudent implements Player{
     @Override
     public int getGPA(){
         return GPA;
+    }
+    
+    @Override
+    public String getClub(String club){
+        return clubs.get(clubs.indexOf(club));
+    }
+    
+    @Override
+    public void addClub(String club){
+        clubs.add(club);
     }
 }
