@@ -15,7 +15,8 @@ public class Harvard implements Location {
     @Override
     public String enter(Player p) throws InterruptedException{
         // put your code here
-        System.out.println("*Its you first day of college at Harvard!*");
+        Thread.sleep(1000);
+        System.out.println("\n*Its you first day of college at Harvard!*");
         System.out.println("The time is " + p.getHour());
         
         Thread.sleep(1000);
@@ -36,23 +37,27 @@ public class Harvard implements Location {
             Thread.sleep(1000);
             System.out.println("I'm going to join the dungeons and dragons club! You want to join in? - Toby");
             Thread.sleep(1000);
-            System.out.println("Are you going to join the dungeons and dragons club? [YES] or [No].");
+            System.out.println("Are you going to join the dungeons and dragons club? [YES] or [NO].");
             String moreUserinput = sc.next();
             moreUserinput = moreUserinput.toUpperCase();
             if(moreUserinput.equals("YES")) {
-                System.out.println("Sure");
+                Thread.sleep(1000);
                 p.addClub("Dungeons and Dragons");
             } else {
-                System.out.println("Not yet");
                 System.out.println("Its treason then. - Toby");
+                Thread.sleep(1000);
                 System.out.println("Maybe later.");
+                Thread.sleep(1000);
                 System.out.println("Ok. You know who to see if you change you mind. - Toby");
             }
+            Thread.sleep(1000);
             System.out.println("What do you have first? - Toby");
+                Thread.sleep(1000);
             System.out.println("Business Management.");
+                Thread.sleep(1000);
             System.out.println("Me too! I'll see you there. - Toby");
-        } 
-        {
+                Thread.sleep(1000);
+        } else {
              Thread.sleep(1000);
              System.out.println("*You walk away.*")
              ;Thread.sleep(1000);
