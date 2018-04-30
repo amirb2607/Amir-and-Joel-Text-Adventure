@@ -39,4 +39,8 @@ public interface Player{
     public int getGPA();
     
     public void changeGPA(int g);
+    
+    public void addClub(String club);
+    
+    public String getClub(String club);
 }
