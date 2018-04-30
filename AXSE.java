@@ -46,8 +46,7 @@ public class AXSE implements Location
             p.changeHour(1);
             System.out.println("John: Uhhh. I have to go now. See you around.");
         } else if (input.equals("YES")) {
-            Kodak(p);
-            
+            nextClass(p);
         } else {
             skipClass(p);
         }
@@ -129,6 +128,28 @@ public class AXSE implements Location
     public void Manson(Player p) throws InterruptedException {
         
 
+    }
+    
+    public void chooseCollege(Player p) throws InterruptedException {
+        
+    }
+    
+    public void nextClass(Player p) throws InterruptedException {
+        if(p.getHour() == 9){
+                Stony(p);
+            } else if(p.getHour() == 10){
+                Village(p);
+            } else if(p.getHour() == 11){
+                Bush(p);
+            } else if(p.getHour() == 12){
+                Rossman(p);
+            } else if(p.getHour() == 13){
+                Manson(p);
+            } else if(p.getHour() == 14){
+                Kodak(p);
+            } else {
+                chooseCollege(p);
+            }
     }
 
 }
