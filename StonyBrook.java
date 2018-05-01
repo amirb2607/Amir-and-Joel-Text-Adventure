@@ -38,14 +38,16 @@ public class StonyBrook implements Location
         print("Hi, I'm" + " Player " + "what's your name?", 1300);
         print("'I already told you stupid, my name is Toby' -Toby", 1200);
         print("Jesus christ, you are so mean!", 1100);
-        print("'I'm sorry" + " Player!' -Toby", 1000);
+        print("'I... I.... I'mmm sorry" + " Player!' -Toby", 1000);
         print("'What class do you have right now?' -Toby", 1200);
       }
       else if(userinput.equals("LMAO")){
-        print("Lmao? Do I know you?", 1000);  
+        print("Lmao? Do I know you?", 1000);
+        print("'N... n... no, bu..t you cou...ld get to kn... kno... know me!' -Toby", 2000);
+        print("Well , I'm " + "Player. " + "What's your name?");
       }
       else{
-        print("*Are you dumb? Respond properly, please*", 1300);
+        print("*Respond properly, please*", 1300);
         hiOrLmao();
       }
     }
