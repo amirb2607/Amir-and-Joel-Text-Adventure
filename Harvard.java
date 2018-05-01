@@ -23,7 +23,7 @@ public class Harvard implements Location {
         Thread.sleep(1000);
         System.out.println("*A random fellow freshman walks up to you.*");
         Thread.sleep(1000);
-        System.out.println("Hi! I'm uhh ... Toby! -Toby");
+        System.out.println("Hi! I'm uhh ... T-T-To-T-T-To Toby! -Toby");
         Thread.sleep(1000);
         System.out.println("How do you respond to Toby? [Hi] or [Akwardly walk away]");
         Scanner sc = new Scanner(System.in);
@@ -44,12 +44,17 @@ public class Harvard implements Location {
             } else {
                 System.out.println("Thats ok. If you change you mind let me know! - Toby");
             }
+            System.out.println("Who do you have... uhh fi-first? - Toby");
+            System.out.println("Professer Clark.");
+            System.out.println("Me Toooo! - Toby");
+            System.out.println("Ok. Ill see you there");
+            System.out.println("OK? - Toby");
         } else {
              Thread.sleep(1000);
-             System.out.println("*You walk away.*")
-             ;Thread.sleep(1000);
+             System.out.println("*You walk away.*");
+             Thread.sleep(1000);
              System.out.println("Hey, you don't want to be friends? -Toby");
-             ;Thread.sleep(1000);
+             Thread.sleep(1000);
              System.out.println("Maybe later. ");
         }
         System.out.println("*!*");
