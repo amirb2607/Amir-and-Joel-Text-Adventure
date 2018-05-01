@@ -74,5 +74,6 @@ public class HighSchoolStudent implements Player{
     @Override
     public void addClub(String club){
         clubs.add(club);
+        System.out.println("You joined the " + club + " club!");
     }
 }

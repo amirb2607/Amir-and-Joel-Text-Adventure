@@ -12,10 +12,11 @@ public class AdventureForSoftwareEngineering implements Game{
     @Override
     public List<Location> getLocations(){
         List<Location> levels = new ArrayList<Location>();
-        levels.add(new HouseWakeUp());
-        levels.add(new Starbucks());
-        levels.add(new AXSE());
+        //levels.add(new HouseWakeUp());
+        //levels.add(new Starbucks());
+       // levels.add(new AXSE());
         //levels.add(new StonyBrook());
+        levels.add(new Harvard());
         
         return levels;
     }
