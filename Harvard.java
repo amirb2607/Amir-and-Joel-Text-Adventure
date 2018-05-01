@@ -27,9 +27,9 @@ public class Harvard implements Location {
         Thread.sleep(1000);
         System.out.println("How do you respond to Toby? [Hi] or [Akwardly walk away]");
         Scanner sc = new Scanner(System.in);
-        String userinput = sc.next();
+        String userinput = sc.nextLine();
         userinput = userinput.toUpperCase();
-        if(userinput.equals("HI")) {
+        if(userinput.indexOf("HI") > -1 || userinput.indexOf("HELLO") > -1 ) {
             System.out.println("Whats going on? I'm excited to be here! -Toby");
             Thread.sleep(1000);
             System.out.println("Me too");
@@ -37,8 +37,13 @@ public class Harvard implements Location {
             System.out.println("I'm going to join the dungeons and dragons club! You want to join in? - Toby");
             Thread.sleep(1000);
             System.out.println("Are you going to join the dungeons and dragons club? [YES] or [No].");
-            String moreUserinput = sc.next();
-            userinput = userinput.toUpperCase();
+            String moreUserinput = sc.nextLine();
+            moreUserinput = moreUserinput.toUpperCase();
+            if(moreUserinput.indexOf("YES") > -1 || moreUserinput.indexOf("YA") > -1 ) {
+                p.addClub("Dungeons and Dragons");
+            } else {
+                System.out.println("Thats ok. If you change you mind let me know! - Toby");
+            }
         } else {
              Thread.sleep(1000);
              System.out.println("*You walk away.*")
