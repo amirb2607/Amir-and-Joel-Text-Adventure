@@ -14,7 +14,7 @@ public class print
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void text(String a, int time) throws InterruptedException
+    public static void text(String a, int time) throws InterruptedException
     {
       System.out.println(a);
       Thread.sleep(time);

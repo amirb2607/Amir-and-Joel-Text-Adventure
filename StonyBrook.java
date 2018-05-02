@@ -20,6 +20,7 @@ public class StonyBrook implements Location
       print("'Uh, h... he... hey, I'm To... Toby' -Toby", 1500);
       print("*How are you going to respond?*", 1000);
       hiOrLmao();
+      print.text("dawdaw", 1000);
       return "adwda";
     }
     
