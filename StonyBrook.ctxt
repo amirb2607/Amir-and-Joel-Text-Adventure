@@ -7,4 +7,6 @@ comment2.params=a\ time
 comment2.target=void\ print(java.lang.String,\ int)
 comment3.params=
 comment3.target=void\ hiOrLmao()
-numComments=4
+comment4.params=a\ t
+comment4.target=void\ typingEffect(java.lang.String,\ int)
+numComments=5
