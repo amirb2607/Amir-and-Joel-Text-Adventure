@@ -1,10 +1,12 @@
 #BlueJ class context
-comment0.params=
-comment0.target=java.lang.String\ getName()
-comment1.params=p
-comment1.target=java.lang.String\ enter(Player)
-comment2.params=a\ time
-comment2.target=void\ print(java.lang.String,\ int)
-comment3.params=
-comment3.target=void\ hiOrLmao()
-numComments=4
+comment0.target=StonyBrook
+comment0.text=\n\ Write\ a\ description\ of\ class\ StonyBrook\ here.\n\n\ @author\ (Amir\ Badrudeen)\n\ @version\ (v0.1)\n
+comment1.params=
+comment1.target=java.lang.String\ getName()
+comment2.params=p
+comment2.target=java.lang.String\ enter(Player)
+comment3.params=a\ time
+comment3.target=void\ print(java.lang.String,\ int)
+comment4.params=
+comment4.target=void\ hiOrLmao()
+numComments=5
