@@ -11,7 +11,7 @@ public class HighSchoolStudent implements Player{
     
     private int tiredness = 5;
     private Inventory i = null;
-    private int hour = 7;
+    private int hour = 8;
     private double money = 20;
     private int GPA = 76;
     ArrayList<String> clubs = new ArrayList<String>();
@@ -74,5 +74,6 @@ public class HighSchoolStudent implements Player{
     @Override
     public void addClub(String club){
         clubs.add(club);
+        System.out.println("You joined the " + club + " club!");
     }
 }

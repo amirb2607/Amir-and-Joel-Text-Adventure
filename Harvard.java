@@ -23,13 +23,13 @@ public class Harvard implements Location {
         Thread.sleep(1000);
         System.out.println("*A random fellow freshman walks up to you.*");
         Thread.sleep(1000);
-        System.out.println("Hi! I'm uhh ... Toby! -Toby");
+        System.out.println("Hi! I'm uhh ... T-T-To-T-T-To Toby! -Toby");
         Thread.sleep(1000);
         System.out.println("How do you respond to Toby? [Hi] or [Akwardly walk away]");
         Scanner sc = new Scanner(System.in);
-        String userinput = sc.next();
+        String userinput = sc.nextLine();
         userinput = userinput.toUpperCase();
-        if(userinput.equals("HI")) {
+        if(userinput.indexOf("HI") > -1 || userinput.indexOf("HELLO") > -1 ) {
             System.out.println("Whats going on? I'm excited to be here! -Toby");
             Thread.sleep(1000);
             System.out.println("Me too");
@@ -37,14 +37,26 @@ public class Harvard implements Location {
             System.out.println("I'm going to join the dungeons and dragons club! You want to join in? - Toby");
             Thread.sleep(1000);
             System.out.println("Are you going to join the dungeons and dragons club? [YES] or [No].");
-            String moreUserinput = sc.next();
-            userinput = userinput.toUpperCase();
+            Thread.sleep(1000);
+            String moreUserinput = sc.nextLine();
+            moreUserinput = moreUserinput.toUpperCase();
+            if(moreUserinput.indexOf("YES") > -1 || moreUserinput.indexOf("YA") > -1 ) {
+                p.addClub("Dungeons and Dragons");
+            } else {
+                System.out.println("Thats ok. If you change you mind let me know! - Toby");
+            }
+            Thread.sleep(1000);
+            System.out.println("Who do you have... uhh fi-first? - Toby");
+            System.out.println("Professer Clark.");
+            System.out.println("Me Toooo! - Toby");
+            System.out.println("Ok. Ill see you there");
+            System.out.println("OK? - Toby");
         } else {
              Thread.sleep(1000);
-             System.out.println("*You walk away.*")
-             ;Thread.sleep(1000);
+             System.out.println("*You walk away.*");
+             Thread.sleep(1000);
              System.out.println("Hey, you don't want to be friends? -Toby");
-             ;Thread.sleep(1000);
+             Thread.sleep(1000);
              System.out.println("Maybe later. ");
         }
         System.out.println("*!*");
