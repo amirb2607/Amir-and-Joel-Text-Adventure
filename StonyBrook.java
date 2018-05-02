@@ -27,7 +27,6 @@ public class StonyBrook implements Location
     public void print(String a, int time) throws InterruptedException{
      System.out.println(a);
      Thread.sleep(time);
-     System.out.println("\n");
     }
     
     public void hiOrLmao() throws InterruptedException{
@@ -45,7 +44,7 @@ public class StonyBrook implements Location
       else if(userinput.equals("LMAO")){
         print("Lmao? Do I know you?", 1000);
         print("'N... n... no, bu..t you cou...ld get to kn... kno... know me!' -Toby", 2000);
-        print("Well , I'm " + "Player. " + "What's your name?");
+        print("Well , I'm " + "Player. " + "What's your name?" , 1200);
       }
       else{
         print("*Respond properly, please*", 1300);

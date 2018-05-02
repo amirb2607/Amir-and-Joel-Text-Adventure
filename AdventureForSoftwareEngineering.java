@@ -14,13 +14,10 @@ public class AdventureForSoftwareEngineering implements Game{
         List<Location> levels = new ArrayList<Location>();
         //levels.add(new HouseWakeUp());
         //levels.add(new Starbucks());
-<<<<<<< HEAD
         levels.add(new AXSE());
-=======
         //levels.add(new AXSE());
         levels.add(new StonyBrook());
         //levels.add(new AXSE());
->>>>>>> 64e0107b90e280ada278f477bce092c1792e5417
         //levels.add(new StonyBrook());
         levels.add(new Harvard());
         return levels;
