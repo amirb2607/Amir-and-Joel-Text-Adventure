@@ -71,7 +71,7 @@ public class HouseWakeUp implements Location{
             
             p.setInventory(backpack);
         }
-        
+        p.changeHour(1);
         // Before leaving the location, always 
         //  -check if we've hit game over (player is dead)
         //  -update the day and time for the next time player enters
