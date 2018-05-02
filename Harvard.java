@@ -37,6 +37,7 @@ public class Harvard implements Location {
             System.out.println("I'm going to join the dungeons and dragons club! You want to join in? - Toby");
             Thread.sleep(1000);
             System.out.println("Are you going to join the dungeons and dragons club? [YES] or [No].");
+            Thread.sleep(1000);
             String moreUserinput = sc.nextLine();
             moreUserinput = moreUserinput.toUpperCase();
             if(moreUserinput.indexOf("YES") > -1 || moreUserinput.indexOf("YA") > -1 ) {
@@ -44,6 +45,7 @@ public class Harvard implements Location {
             } else {
                 System.out.println("Thats ok. If you change you mind let me know! - Toby");
             }
+            Thread.sleep(1000);
             System.out.println("Who do you have... uhh fi-first? - Toby");
             System.out.println("Professer Clark.");
             System.out.println("Me Toooo! - Toby");
