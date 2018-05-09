@@ -15,6 +15,7 @@ public class HighSchoolStudent implements Player{
     private double money = 20;
     private int GPA = 76;
     ArrayList<String> clubs = new ArrayList<String>();
+    private Class[] schedule = new Class[6];
     
     @Override
     public Inventory getInventory(){
