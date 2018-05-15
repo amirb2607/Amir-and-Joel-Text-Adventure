@@ -1,8 +1,8 @@
-
+import java.util.Scanner;
 /**
  * Write a description of class print here.
  *
- * @author (your name)
+ * @author (Amir Badrudeen)
  * @version (a version number or a date)
  */
 public class print
@@ -17,6 +17,7 @@ public class print
         System.out.print(a.charAt(i));
         Thread.sleep(time);
         if(i == a.length() -1){
+         Thread.sleep(500);
          System.out.println("");
         }
       }
