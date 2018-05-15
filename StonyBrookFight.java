@@ -15,10 +15,14 @@ public class StonyBrookFight implements Location
      * @return     the sum of x and y 
      */
     @Override
-    public String enter(Player P)
+    public String enter(Player P) throws InterruptedException
     {
-        // put your code here
-        return "idk";
+      // put your code here
+      int x = 0;
+      while(x == 0){
+         print.effect("aaadaaasdadwahsdaaaaaaasaaaaadasaaaaaaaaaaaaaaaadawaaaadawadawdaaaaaaaaaaaaaaa", 11);
+      } 
+      return "idk";
     }
     
     @Override
