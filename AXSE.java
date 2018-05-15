@@ -48,7 +48,7 @@ public class AXSE implements Location{
     }
     
     public void Stony(Player p) throws InterruptedException {
-        System.out.println("Mr. Stony: Hello class! Today we are doing some identification of errors and how to fix them..");
+        print.effect("Mr. Stony: Hello class! Today we are doing some identification of errors and how to fix them..", 40);
     }
     
     public void Village(Player p) throws InterruptedException {

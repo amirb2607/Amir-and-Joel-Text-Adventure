@@ -8,26 +8,22 @@
 public class StonyBrookFight implements Location
 {
     // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class StonyBrookFight
-     */
-    public StonyBrookFight()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
     /**
      * An example of a method - replace this comment with your own
      * 
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    @Override
+    public String enter(Player P)
     {
         // put your code here
-        return x + y;
+        return "idk";
+    }
+    
+    @Override
+    public String getName(){
+      return "StonyBrookFight";
     }
 }
+
