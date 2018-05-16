@@ -22,9 +22,11 @@ public class HighSchoolStudent implements Player{
      // return 
     //}
     
+    
+    
     @Override
     public Inventory getInventory(){
-        return null; 
+        return i; 
     }
     
     @Override
