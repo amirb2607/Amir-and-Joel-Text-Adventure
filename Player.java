@@ -36,9 +36,9 @@ public interface Player{
     
     public void changeMoney(double m);
     
-    public int getGPA();
+    //public int getGPA();
     
-    public void changeGPA(int g);
+    //public void changeGPA(int g);
     
     public void addClub(String club);
     

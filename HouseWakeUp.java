@@ -63,6 +63,7 @@ public class HouseWakeUp implements Location{
         //  -update the day and time for the next time player enters
         day++;
         // TBD: update month correctly
+        
         return nextLocationName;
     }
     

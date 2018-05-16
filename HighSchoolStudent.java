@@ -13,9 +13,14 @@ public class HighSchoolStudent implements Player{
     private Inventory i = null;
     private int hour = 7;
     private double money = 20;
-    private int GPA = 76;
+    //private int GPA = 76;
+    private FiniteItem GPA;
     ArrayList<String> clubs = new ArrayList<String>();
     private Class[] schedule = new Class[6];
+    
+    //public Item getGPA(){
+     // return 
+    //}
     
     @Override
     public Inventory getInventory(){
@@ -57,7 +62,7 @@ public class HighSchoolStudent implements Player{
         return money;
     }
     
-    @Override
+    /*@Override
     public void changeGPA(int g){
         GPA += g;
     }
@@ -66,6 +71,7 @@ public class HighSchoolStudent implements Player{
     public int getGPA(){
         return GPA;
     }
+    */
     
     @Override
     public String getClub(String club){
