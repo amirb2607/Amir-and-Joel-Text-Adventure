@@ -53,8 +53,8 @@ public class HouseWakeUp implements Location{
                 nextLocationName = "Starbucks";
             }
             Inventory backpack = new AFSEBackpack();
-            Item phone = new FiniteItem("Phone", "Phone", 1);
-            backpack.addItem(phone);
+            Item GPA = new FiniteItem("GPA", "grade", 76);
+            backpack.addItem(GPA);
             p.setInventory(backpack);
         }
         p.changeHour(1);
