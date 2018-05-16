@@ -1,3 +1,4 @@
+import java.util.Scanner;
 /**
  * Write a description of class justDance here.
  * 
@@ -7,35 +8,41 @@
 public class justDance
 {
     // instance variables - replace the example below with your own
-    private char key;
-    private int time;
-    private int dificulty;
+    public static char key;
+    public static int time;
+    public static int gameDificulty;
     
-    private int currTime = 0;
-    private int keyTime = 0;
-    /**
-     * Constructor for objects of class justDance
-     */
-    public void justDance(int song, int dificulty){
+    private static int currTime = 0;
+    private static int keyTime = 0;
+    
+    private static long startTime = 0;
+    
+    
+    public static void start(int song, int dificulty) throws InterruptedException {
         // initialise instance variables
         time = song;
-        this.dificulty = dificulty;
+        gameDificulty = dificulty;
+        
+        startTime = System.nanoTime();
         
         newKey();
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public void newKey()
-    {
+    
+    public static void newKey() throws InterruptedException {
+        Scanner sc = new Scanner(System.in);
+        
         String tempKey = "1234567890qwertyuiopasdfghjklzxcvbnm";
         key = tempKey.charAt((int)(Math.random() * 36));
-        if(currTime < time){
+        print.reg(key + "", gameDificulty * 500);
+        currTime = (int)((System.nanoTime() - startTime) / 1000000000);
+        char letterPressed = sc.next().charAt(0);
+        if(letterPressed == key){
+            print.reg("+ 1", 0);
+        }
+        
+        if(currTime < time) {
             newKey();
         }
     }
+    
 }
