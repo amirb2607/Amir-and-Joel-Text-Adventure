@@ -11,10 +11,11 @@ public class HighSchoolStudent implements Player{
     
     private int tiredness = 5;
     private Inventory i = null;
-    private int hour = 8;
+    private int hour = 7;
     private double money = 20;
     private int GPA = 76;
     ArrayList<String> clubs = new ArrayList<String>();
+    private Class[] schedule = new Class[6];
     
     @Override
     public Inventory getInventory(){

@@ -1,5 +1,9 @@
 #BlueJ class context
-comment0.params=a\ time
-comment0.target=void\ text(java.lang.String,\ int)
-comment0.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
-numComments=1
+comment0.target=print
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ print\ here.\r\n\r\n\ @author\ (Amir\ Badrudeen)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=a\ time
+comment1.target=void\ effect(java.lang.String,\ int)
+comment1.text=\r\n\ Typing\ effect\ boi\r\n
+comment2.params=a\ time
+comment2.target=void\ reg(java.lang.String,\ int)
+numComments=3

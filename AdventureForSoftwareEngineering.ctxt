@@ -1,6 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=java.util.List\ getLocations()
+comment0.target=AdventureForSoftwareEngineering
+comment0.text=\r\n\ Implementaiton\ of\ text\ adventure\ game\ involving\ a\ first\ year\ teacher\r\n\ starting\ at\ a\ new\ school\ teaching\ CS.\r\n\ @author\ Sean\ Stern\r\n\ @version\ 1.0\r\n
 comment1.params=
-comment1.target=Player\ getPlayer()
-numComments=2
+comment1.target=java.util.List\ getLocations()
+comment2.params=
+comment2.target=Player\ getPlayer()
+numComments=3

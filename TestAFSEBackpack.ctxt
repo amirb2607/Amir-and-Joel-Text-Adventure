@@ -1,5 +1,4 @@
 #BlueJ class context
-<<<<<<< HEAD
 comment0.params=
 comment0.target=void\ testConstructor()
 comment1.params=
@@ -15,22 +14,3 @@ comment5.target=void\ testGetItemCombo()
 comment6.params=
 comment6.target=void\ testHasItemUsedUp()
 numComments=7
-=======
-comment0.target=TestAFSEBackpack
-comment0.text=\n\ The\ test\ class\ TestBackpack.\n
-comment1.params=
-comment1.target=void\ testConstructor()
-comment2.params=
-comment2.target=void\ testGetItemNoCombine()
-comment3.params=
-comment3.target=void\ testGetItemThatIsAbsentInEmptyBackpack()
-comment4.params=
-comment4.target=void\ testGetItemThatIsAbsentInFilledBackpack()
-comment5.params=
-comment5.target=void\ testHasItem()
-comment6.params=
-comment6.target=void\ testGetItemCombo()
-comment7.params=
-comment7.target=void\ testHasItemUsedUp()
-numComments=8
->>>>>>> a73643b9a122368e07d3df7ceea2fa546b200e76

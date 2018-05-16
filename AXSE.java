@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 /**
  * Write a description of class WalkToAFSE here.
  *
@@ -18,27 +18,22 @@ public class AXSE implements Location{
     @Override
     public String enter(Player p) throws InterruptedException{
         String nextLocationName;
-        System.out.println("Finally here in AXSE *Sigh");
-        Thread.sleep(1000);
+        print.effect("Finally here in AXSE *Sigh",40);        
         skipClass(p);
         return college;
     }
     
     public void skipClass(Player p) throws InterruptedException {
-        System.out.println("The time is : " + p.getHour());
-        Thread.sleep(1000);
-        System.out.println("Brandon: Hey Player are you going to class?");
-        Thread.sleep(1000);
-        System.out.println("Do you want to go to class? [Yes] or [No]");
-        Thread.sleep(1000);
+        print.effect("The time is : " + p.getHour(),40);
+        print.effect("Brandon: Hey Player are you going to class?",40);
+        print.effect("Do you want to go to class? [Yes] or [No]",40);
         Scanner scc = new Scanner(System.in);
         String input = scc.next();
         input = input.toUpperCase();
         if(input.equals("NO")){
-            System.out.println("Um no. Lets hang out a bit.");
-            Thread.sleep(1000);
+            print.effect("Um no. Lets hang out a bit.",40);
             p.changeHour(1);
-            System.out.println("Brandon: Uhhh. I have to go now. See you around.");
+            print.effect("Brandon: Uhhh. I have to go now. See you around.",40);
             nextClass(p);
         } else if (input.equals("YES")) {
             nextClass(p);
@@ -48,86 +43,57 @@ public class AXSE implements Location{
     }
     
     public void Stony(Player p) throws InterruptedException {
-        System.out.println("Mr. Stony: Hello class! Today we are doing some identification of errors and how to fix them..");
+        print.effect("Mr. Stony: Hello class! Today we are doing some identification of errors and how to fix them..",40);
+        Kodak(p);
     }
     
     public void Village(Player p) throws InterruptedException {
- 
-        {
-              System.out.println("*Now entering Rossman class*");
-              Thread.sleep(3000);
-              print.text ("Hey player", 1000);
-        }
+        
     }
     
     public void Bush(Player p) throws InterruptedException {
-      System.out.println("*Now entering Joe Bushes class*");
-      Thread.sleep(1000);
-      System.out.println("Damn it’s Joe bushes class this guy is kind of a hardass.");
-      Thread.sleep(1000);
-      System.out.println("Bush: Hey Player! Why did you take so long?");
-      Thread.sleep(1000);
-      System.out.println("Sorry sir I’m getting right to it");
-      Thread.sleep(1000);
-      System.out.println("What are we doing in class today?");
-      Thread.sleep(1000);
-      System.out.println("Bush: Read the board Player Instructions are written down there if you actually came you would know this. ");
-      Thread.sleep(1000);
-      System.out.println("*Player starts to run and is eventually let out of class. *");
-      Thread.sleep(1000);
+      print.effect("*Now entering Joe Bushes class*",40);
+      print.effect("Damn it’s Joe bushes class this guy is kind of a hardass.",40);
+      print.effect("Bush: Hey Player! Why did you take so long?",40);
+      print.effect("Sorry sir I’m getting right to it",40);
+      print.effect("What are we doing in class today?",40);
+      print.effect("Bush: Read the board Player Instructions are written down there if you actually came you would know this. ",40);
+      print.effect("*Player starts to run and is eventually let out of class. *",40);
+      Rossman(p);
         //Player.Gpa= p.Gpa() +1;
   
     }
     
-    public void Rossman(Player p) throws InterruptedException
-    {
-     
-       {
-          System.out.println("*Now entering Rossman class*");
-          Thread.sleep(3000);
-          print.text ("Rossman: Hey player", 2000);
-          print.text ("Hey Rossman!", 2000);
-          print.text ("*Brandon waves at you*", 2000);
-          print.text ("Hey brandon good to see you.", 2000);
-          print.text ("Brandon: This class is pretty boring the teacher has a very monotone voice.", 2000);
-          print.text ("AHAHA that's so true AHAHAHA", 2000);
-          System.out.println("*Rossmans class starts*");
-          print.text ("a conic section or simply conic is a curve obtained as the intersection of the surface of a cone with a plane. The three types of conic section are the hyperbola, the parabola, and the ellipse.", 2000);
-        }  
+    public void Rossman(Player p) throws InterruptedException {
+       print.effect("*Now entering Rossmans class*",40);
+       print.effect("Rossman: How are you guys doing class is starting take your seats.",40);
+       print.effect("Brandon:Hey Player damn we are in all the same classes. ",40);
+       print.effect("HaHa yeah man crazy coincedence.",40);
+       print.effect("Rossman: Add and subtract fractions with unlike denominators (including mixed numbers) by replacing given fractions with equivalent fractions in such a way as to produce an equivalent sum or difference of fractions with like denominators. For example, 2/3 + 5/4 = 8/12 + 15/12 = 23/12. (In general, a/b + c/d = (ad + bc)/bd.) ",40);
+       print.effect("Alright Player what is 2-(1/2)",40);
+       int question = choices.userInput("A dexter","3/2" ,"what is a a dexter?","Correct WOW you were paying attention.");
     }
     
     public void Kodak(Player p) throws InterruptedException {
-       System.out.println("*Now entering Bleasene Kodaks class*");
-       System.out.println("It’s Kodak's room. She's a chill teacher.");
-       Thread.sleep(1000);
-       System.out.println("Brandon: Hey sit here Player it’s Brandon!!");
-       Thread.sleep(1000);
-       System.out.println("Brandon: Hey Player this class isn't at all difficult.");
-       Thread.sleep(1000);
-       System.out.println("Brandon: We just have to hand in some worksheets and she gives us a good grade.");
-       System.out.println("Yes finally a easy class for today.");
-       Thread.sleep(1000);
-       System.out.println("Kodak: Hey You Two Stop Talking Back There");
-       Thread.sleep(1000);
-       System.out.println("Oh damn");
-       Thread.sleep(1000);
-       System.out.println("Kodak: Let’s see Player what is the word you in spanish?[TU] or [YO]");
-       Thread.sleep(1000);
+       print.effect("*Now entering Bleasene Kodaks class*",40);
+       print.effect("It’s Kodak's room. She's a chill teacher.",40); 
+       print.effect("Brandon: Hey sit here Player it’s Brandon!!",40);
+       print.effect("Brandon: Hey Player this class isn't at all difficult.",40);
+       print.effect("Brandon: We just have to hand in some worksheets and she gives us a good grade.",40);
+       print.effect("Yes finally a easy class for today.",40);
+       print.effect("Kodak: Hey You Two Stop Talking Back There",40);
+       print.effect("Oh damn",40);
+       print.effect("Kodak: Let’s see Player what is the word you in spanish?[TU] or [YO]",40);
        Scanner sc = new Scanner(System.in);
        String userinput = sc.next();
        userinput = userinput.toUpperCase();
-       Thread.sleep(1000);
        if(userinput.equals("TU")){
-           System.out.println("Kodak: Good I guess you guys were listening");
-           Thread.sleep(1000);
-           System.out.println("Brandon: Nice Save!");
-           Thread.sleep(1000);
-           //Player.Gpa= p.Gpa() +1;
+           print.effect("Kodak: Good I guess you guys were listening",40);
+           print.effect("Brandon: Nice Save!",40);
+           //Player.Gpa= p.Gpa() +1;0
         } else {
-            System.out.println("Wrong! Shut up and pay attention.");
-            Thread.sleep(1000);
-            System.out.println("Brandon:Damn we blew it she’s definitely going to keep an eye on us.");
-            Thread.sleep(1000);
+            print.effect("Wrong! Shut up and pay attention.",40);
+            print.effect("Brandon:Damn we blew it she’s definitely going to keep an eye on us.",40);
         }
         //Time+1hour
        Bush(p);

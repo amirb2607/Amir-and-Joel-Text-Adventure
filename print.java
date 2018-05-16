@@ -1,21 +1,29 @@
-
+import java.util.Scanner;
 /**
  * Write a description of class print here.
  *
- * @author (your name)
+ * @author (Amir Badrudeen)
  * @version (a version number or a date)
  */
 public class print
 {
-    // instance variables - replace the example below with your own
+    //This causes typing effect to occur
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Typing effect boi
      */
-    public static void text(String a, int time) throws InterruptedException
+    public static void effect(String a, int time) throws InterruptedException
     {
+      for(int i = 0; i < a.length(); i++){
+        System.out.print(a.charAt(i));
+        Thread.sleep(time);
+        if(i == a.length() -1){
+         Thread.sleep(500);
+         System.out.println("");
+        }
+      }
+    }
+    
+    public static void reg(String a, int time) throws InterruptedException{
       System.out.println(a);
       Thread.sleep(time);
     }

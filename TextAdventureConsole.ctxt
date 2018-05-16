@@ -1,5 +1,7 @@
 #BlueJ class context
-comment0.params=args
-comment0.target=void\ main(java.lang.String[])
-comment0.text=\n\ Creates\ a\ predetermined\ {@link\ Game},\ inserts\ it\ into\ an\ {@link\ Engine}\n\ and\ plays\ the\ game.\n\n\ @throws\ InterruptedException\ if\ the\ game\ is\ interrupted\ while\ paused\n
-numComments=1
+comment0.target=TextAdventureConsole
+comment0.text=\r\n\ A\ text\ adventure\ console\ that\ binds\ together\ an\ {@link\ Engine}\ and\ a\r\n\ {@link\ Game}.\ \r\n\ @author\ Sean\ Stern\r\n\ @version\ 1.0\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Creates\ a\ predetermined\ {@link\ Game},\ inserts\ it\ into\ an\ {@link\ Engine}\r\n\ and\ plays\ the\ game.\r\n\r\n\ @throws\ InterruptedException\ if\ the\ game\ is\ interrupted\ while\ paused\r\n
+numComments=2

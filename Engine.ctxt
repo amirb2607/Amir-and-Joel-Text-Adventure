@@ -1,13 +1,11 @@
 #BlueJ class context
-comment0.target=Engine
-comment0.text=\n\ Engine\ for\ text\ adventure\ game.\n\ @author\ Sean\ Stern\n\ @version\ 1.0\n
+comment0.params=
+comment0.target=void\ start()
+comment0.text=\r\n\ Starts\ the\ Engine\ in\ the\ initial\ game\ state.\ \r\n\ Should\ be\ called\ when\ attempting\ to\ start\ the\ game.\r\n\r\n\ @throws\ InterruptedException\ if\ the\ game\ is\ interrupted\ while\ paused\r\n
 comment1.params=
-comment1.target=void\ start()
-comment1.text=\n\ Starts\ the\ Engine\ in\ the\ initial\ game\ state.\ \n\ Should\ be\ called\ when\ attempting\ to\ start\ the\ game.\n\n\ @throws\ InterruptedException\ if\ the\ game\ is\ interrupted\ while\ paused\n
+comment1.target=boolean\ isGameDone()
+comment1.text=\r\n\ Determines\ if\ the\ engine\ has\ completed\ a\ game.\r\n\ Should\ be\ used\ to\ check\ if\ the\ game\ is\ over\ before\ transitioning\ to\ the\r\n\ next\ game\ state.\r\n\ Should\ only\ be\ called\ AFTER\ the\ engine\ has\ been\ started\ via\ \r\n\ {@link\ \#start()}.\r\n\r\n\ @return\ true\ when\ the\ game\ is\ over,\ false\ otherwise\r\n
 comment2.params=
-comment2.target=boolean\ isGameDone()
-comment2.text=\n\ Determines\ if\ the\ engine\ has\ completed\ a\ game.\n\ Should\ be\ used\ to\ check\ if\ the\ game\ is\ over\ before\ transitioning\ to\ the\n\ next\ game\ state.\n\ Should\ only\ be\ called\ AFTER\ the\ engine\ has\ been\ started\ via\ \n\ {@link\ \#start()}.\n\n\ @return\ true\ when\ the\ game\ is\ over,\ false\ otherwise\n
-comment3.params=
-comment3.target=void\ goToNextState()
-comment3.text=\n\ Transitions\ the\ engine\ to\ the\ next\ game\ state.\n\ Should\ only\ be\ called\ AFTER\ the\ engine\ has\ been\ started\ via\n\ {@link\ \#start()}\ AND\ it\ has\ been\ confirmed\ that\ the\ game\ is\n\ NOT\ done\ via\ {@link\ isGameDone()}.\n\n\ @throws\ InterruptedException\ if\ game\ is\ interrupted\ while\ paused\n\ @throws\ IllegalStateException\ if\ game\ is\ not\ started\ OR\ game\ is\ done\n
-numComments=4
+comment2.target=void\ goToNextState()
+comment2.text=\r\n\ Transitions\ the\ engine\ to\ the\ next\ game\ state.\r\n\ Should\ only\ be\ called\ AFTER\ the\ engine\ has\ been\ started\ via\r\n\ {@link\ \#start()}\ AND\ it\ has\ been\ confirmed\ that\ the\ game\ is\r\n\ NOT\ done\ via\ {@link\ isGameDone()}.\r\n\r\n\ @throws\ InterruptedException\ if\ game\ is\ interrupted\ while\ paused\r\n\ @throws\ IllegalStateException\ if\ game\ is\ not\ started\ OR\ game\ is\ done\r\n
+numComments=3
